@@ -5,11 +5,14 @@ const app = express();
 const bodyParser = require('body-parser')
 
 
+
 // parse application/x-www-form-urlencoded. Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json. Middleware
 app.use(bodyParser.json());
+
+// configuración global de rutas
 app.use(require('./routes/index'));
 
 
