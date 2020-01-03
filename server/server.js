@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json. Middleware
 app.use(bodyParser.json());
-app.use(require('./routes/routes'));
+app.use(require('./routes/index'));
 
 
 mongoose.connect(process.env.URLDB, {
